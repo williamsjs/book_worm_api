@@ -23,5 +23,5 @@ test:
 production:
   <<: *default
   database: book_worm_api_production
-  username: josephwilliams
+  username: <%= ENV['BOOK_WORM_API_USERNAME'] %>
   password: <%= ENV['BOOK_WORM_API_DATABASE_PASSWORD'] %>
