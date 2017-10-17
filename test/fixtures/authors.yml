@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bio: MyText
+  AuthorGenres: one
+  AuthorBooks: one
+  date_of_birth: 2017-10-16
+
+two:
+  name: MyString
+  bio: MyText
+  AuthorGenres: two
+  AuthorBooks: two
+  date_of_birth: 2017-10-16
