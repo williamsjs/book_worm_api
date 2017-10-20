@@ -1,0 +1,2 @@
+class BookimagesController < ApplicationController
+end

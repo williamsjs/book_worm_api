@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  synopsis: MyText
+  publisher: MyString
+  average_rating: 1
+  country: MyString
+
+two:
+  title: MyString
+  synopsis: MyText
+  publisher: MyString
+  average_rating: 1
+  country: MyString
