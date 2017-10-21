@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020230516) do
+ActiveRecord::Schema.define(version: 20171021141928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,21 +32,21 @@ ActiveRecord::Schema.define(version: 20171020230516) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "bookgenres", force: :cascade do |t|
+  create_table "book_genres", force: :cascade do |t|
     t.bigint "book_id"
     t.bigint "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_bookgenres_on_book_id"
-    t.index ["genre_id"], name: "index_bookgenres_on_genre_id"
+    t.index ["book_id"], name: "index_book_genres_on_book_id"
+    t.index ["genre_id"], name: "index_book_genres_on_genre_id"
   end
 
-  create_table "bookimages", force: :cascade do |t|
+  create_table "book_images", force: :cascade do |t|
     t.string "link"
     t.bigint "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_bookimages_on_book_id"
+    t.index ["book_id"], name: "index_book_images_on_book_id"
   end
 
   create_table "books", force: :cascade do |t|
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20171020230516) do
 
   add_foreign_key "author_books", "authors"
   add_foreign_key "author_books", "books"
-  add_foreign_key "bookgenres", "books"
-  add_foreign_key "bookgenres", "genres"
-  add_foreign_key "bookimages", "books"
+  add_foreign_key "book_genres", "books"
+  add_foreign_key "book_genres", "genres"
+  add_foreign_key "book_images", "books"
 end
