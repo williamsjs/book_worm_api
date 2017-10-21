@@ -30,7 +30,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book.destroy
+    render status: :forbidden
   end
 
   private 

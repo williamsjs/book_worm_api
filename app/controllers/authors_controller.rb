@@ -30,7 +30,7 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
-    @author.destroy
+    render status: :forbidden
   end
 
   private
