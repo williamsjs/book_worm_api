@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: [:show, :update, :destroy]
 
   def index
-    @books = Book.all
+    @books = Book.search(params[:title])
 
     render json: @books
   end
