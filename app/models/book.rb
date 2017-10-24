@@ -3,9 +3,19 @@ class Book < ApplicationRecord
   has_many :book_images
   has_many :genres, through: :book_genres
 
-  def self.search(search_term)
-    cool = GoogleBooksApi.get_books(search_term)
-    all
+  class << self
+    def search(search_term)
+      cool = get_books(search_term)
+    end
+
+    private
+      def get_books(search_term)
+        new_book(search_term).get_books
+      end
+    
+      def new_book(search_term)
+        GoogleBooksApi.new(search_term)
+      end
   end
 
 end
