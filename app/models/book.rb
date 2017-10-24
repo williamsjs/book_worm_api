@@ -4,6 +4,8 @@ class Book < ApplicationRecord
   has_many :genres, through: :book_genres
 
   def self.search(search_term)
-    search_term ? where('title ILIKE ?', "%#{search_term}%") : all
+    cool = GoogleBooksApi.get_books(search_term)
+    all
   end
+
 end
