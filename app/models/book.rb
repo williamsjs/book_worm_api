@@ -5,7 +5,7 @@ class Book < ApplicationRecord
 
   class << self
     def search(search_term)
-      cool = get_books(search_term)
+      get_books(search_term)
     end
 
     private
