@@ -1,6 +1,6 @@
 # Book Worm API
 
-I'm writing this API so that I can keep notes on various non-fiction books I've been reading.  
+An API that leverages google books API to advance personal education.  
 
 ## Dependencies:
 * #### Postgres -
